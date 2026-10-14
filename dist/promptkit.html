@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="PromptKit — a structured, traceable prompt system for AI-assisted animation workflows.">
+  <title>PromptKit — Cynthia Zheng</title>
+  <link rel="stylesheet" href="promptkit.css">
+  <script src="promptkit.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#project-flow">Skip to project</a>
+  <header class="project-nav" aria-label="Project navigation">
+    <div class="nav-actions">
+      <a href="index.html#work">← Selected work</a>
+      <a class="primary-link" href="https://b42265876-cpu.github.io/Cynthia/web.html" target="_blank" rel="noopener noreferrer">Open prototype ↗</a>
+    </div>
+    <nav class="chapter-nav" aria-label="Case study chapters">
+      <a href="#discover"><b>01</b><span>Discover</span></a><a href="#define"><b>02</b><span>Define</span></a><a href="#develop"><b>03</b><span>Develop</span></a><a href="#deliver"><b>04</b><span>Deliver</span></a>
+    </nav>
+  </header>
+
+  <main id="project-flow">
+    <section class="cover" aria-label="PromptKit project cover">
+      <button class="board-button cover-board" type="button" data-zoom="assets/promptkit/promptkit-01.webp" aria-label="Enlarge PromptKit cover"><img src="assets/promptkit/promptkit-01.webp" alt="PromptKit project cover" width="5820" height="3600" fetchpriority="high"></button>
+    </section>
+
+    <section class="case-flow" aria-label="PromptKit case study">
+      <article class="case-board process-board glow-purple">
+        <header class="board-copy"><span class="eyebrow">Process overview</span><h1>From creative risk to a production-ready system</h1><p>An eleven-week Double Diamond process moved from understanding where creative intent gets lost to designing, testing and delivering a shared prompt workflow for animation teams.</p></header>
+        <button class="board-button" type="button" data-zoom="assets/promptkit/process-overview.webp" aria-label="Enlarge process overview"><img src="assets/promptkit/process-overview.webp" alt="Double Diamond process across Discover, Define, Develop and Deliver" loading="lazy"></button>
+      </article>
+
+      <section class="chapter" id="discover" aria-labelledby="discover-title">
+        <header class="chapter-intro"><span class="chapter-number">01 · Discover</span><h2 id="discover-title">Finding where creative intent gets lost</h2><p>We began by looking beyond generation speed. Interviews, workflow mapping and participatory research showed that the deeper risk appears when creative reasoning is translated into prompts, revised across tools and handed from one role to another.</p></header>
+
+        <article class="case-board glow-cyan"><header class="board-copy"><span class="eyebrow">Framing the opportunity</span><h3>The challenge was not AI quality alone</h3><p>The DNEG brief asked how AI could support animation without weakening authorship, control or visual consistency. Early synthesis reframed the challenge around unclear intent, handoff gaps and creative drift.</p></header><button class="board-button" type="button" data-zoom="assets/promptkit/discovery-summary.webp" aria-label="Enlarge discovery summary"><img src="assets/promptkit/discovery-summary.webp" alt="Discovery summary, problem statement and stakeholder definition" loading="lazy"></button></article>
+
+        <article class="case-board"><header class="board-copy"><span class="eyebrow">Interview research</span><h3>Listening across five animation perspectives</h3><p>Practitioners, students, independent creators and production teams revealed the same pattern: faster generation does not automatically improve control, team visibility or the ability to explain why a decision was made.</p></header><button class="board-button" type="button" data-zoom="assets/promptkit/interview-research.webp" aria-label="Enlarge interview research"><img src="assets/promptkit/interview-research.webp" alt="Interview participants, question focus and research summary" loading="lazy"></button></article>
+
+        <article class="case-board"><header class="board-copy"><span class="eyebrow">Industry exchange</span><h3>Narrowing the scope to pre-production intent</h3><p>Mapping DNEG’s character workflow shifted the project from asking whether AI can generate animation to asking how AI-assisted work can remain clear, controllable and transferable before production begins.</p></header><button class="board-button" type="button" data-zoom="assets/promptkit/dneg-workflow.webp" aria-label="Enlarge DNEG workflow"><img src="assets/promptkit/dneg-workflow.webp" alt="DNEG workflow insight and research direction shift" loading="lazy"></button></article>
+
+        <article class="case-board glow-purple"><header class="board-copy"><span class="eyebrow">Participatory study · n=30</span><h3>Measuring where creative drift feels most likely</h3><p>Participants positioned fourteen production stages by AI involvement and impact on creative direction. The aggregated map made the highest-risk moments visible: interpretation, character development, mood exploration and feedback translation.</p></header><button class="board-button" type="button" data-zoom="assets/promptkit/creative-drift-research.webp" aria-label="Enlarge creative drift research"><img src="assets/promptkit/creative-drift-research.webp" alt="Creative Drift Risk study, quantification method and key findings" loading="lazy"></button></article>
+
+        <article class="case-board"><header class="board-copy"><span class="eyebrow">Journey mapping</span><h3>The weakest moment appears after generation</h3><p>The journey map exposed a steady drop in confidence from feedback to handoff. Speed can hide deviation, review often reveals it too late, and missing rationale creates rework for the next department.</p></header><button class="board-button" type="button" data-zoom="assets/promptkit/workflow-journey.webp" aria-label="Enlarge workflow journey"><img src="assets/promptkit/workflow-journey.webp" alt="AI-assisted workflow journey, emotions, pain points and opportunities" loading="lazy"></button></article>
+      </section>
+
+      <section class="chapter" id="define" aria-labelledby="define-title">
+        <header class="chapter-intro"><span class="chapter-number">02 · Define</span><h2 id="define-title">Turning evidence into a focused design challenge</h2><p>The research converged on one need: creative intent must survive generation, review and handoff. We translated that need into opportunity areas, then narrowed them into a clear problem statement and design criteria.</p></header>
+
+        <article class="case-board glow-pink"><header class="board-copy"><span class="eyebrow">Opportunity areas</span><h3>Five ways to keep the original vision visible</h3><p>The opportunity space combined intent locking, reusable visual structure, feedback translation, decision history and actionable handoff—connecting individual creative control with team-wide traceability.</p></header><button class="board-button" type="button" data-zoom="assets/promptkit/opportunity-areas.webp" aria-label="Enlarge opportunity areas"><img src="assets/promptkit/opportunity-areas.webp" alt="Five design opportunity areas" loading="lazy"></button></article>
+
+        <article class="case-board"><header class="board-copy"><span class="eyebrow">Problem definition</span><h3>How might we preserve intent without slowing the work?</h3><p>Success meant more than writing a better prompt. The solution had to translate intuitive direction into reusable components, keep later-stage teams aligned and reduce the overhead of repeated explanation.</p></header><button class="board-button" type="button" data-zoom="assets/promptkit/hmw-problem-statement.webp" aria-label="Enlarge HMW questions and problem statement"><img src="assets/promptkit/hmw-problem-statement.webp" alt="How Might We questions and final problem statement" loading="lazy"></button></article>
+      </section>
+
+      <section class="chapter" id="develop" aria-labelledby="develop-title">
+        <header class="chapter-intro"><span class="chapter-number">03 · Develop</span><h2 id="develop-title">Exploring, structuring and testing the solution</h2><p>We explored six directions, evaluated them against the research and combined the strongest ideas into PromptKit: a structured prompt frame, shared project context and a lightweight way to capture intent before it disappears.</p></header>
+
+        <article class="case-board"><header class="board-copy"><span class="eyebrow">Concept generation</span><h3>Six directions across creation, handoff and review</h3><p>Each concept addressed a different break in the workflow—from translating directorial feeling into parameters to making decisions reviewable, traceable and easier to reuse.</p></header><button class="board-button" type="button" data-zoom="assets/promptkit/concept-directions.webp" aria-label="Enlarge concept directions"><img src="assets/promptkit/concept-directions.webp" alt="Six concept directions across the creative workflow" loading="lazy"></button></article>
+
+        <article class="case-board glow-purple"><header class="board-copy"><span class="eyebrow">Concept selection</span><h3>One shared system, built from three complementary ideas</h3><p>We assessed each direction for intent fidelity, reduced rework, prototypability and production fit. Structured prompts became the core, strengthened by shared context, traceability and fast personal capture.</p></header><button class="board-button" type="button" data-zoom="assets/promptkit/concept-synthesis.webp" aria-label="Enlarge concept synthesis"><img src="assets/promptkit/concept-synthesis.webp" alt="Concept evaluation and final PromptKit synthesis" loading="lazy"></button></article>
+
+        <article class="case-board"><header class="board-copy"><span class="eyebrow">System model</span><h3>Team depth on web, personal speed on mobile</h3><p>The web workspace holds the full prompt frame, project context, review history and handoff package. The app companion captures a minimum prompt quickly, with the option to sync and complete it with the team.</p></header><button class="board-button" type="button" data-zoom="assets/promptkit/system-overview.webp" aria-label="Enlarge system overview"><img src="assets/promptkit/system-overview.webp" alt="PromptKit web and app system overview" loading="lazy"></button></article>
+
+        <article class="case-board glow-cyan"><header class="board-copy"><span class="eyebrow">Prompt frame development</span><h3>Building a shared vocabulary for visual intent</h3><p>Guidance from six image-generation systems was reviewed and normalised. Affinity mapping separated semantic intent from execution controls, producing a twelve-component frame organised into Content, Design and Presentation.</p></header><button class="board-button" type="button" data-zoom="assets/promptkit/prompt-taxonomy.webp" aria-label="Enlarge prompt taxonomy"><img src="assets/promptkit/prompt-taxonomy.webp" alt="Source review, terminology normalisation and prompt-frame affinity mapping" loading="lazy"></button></article>
+
+        <article class="case-board"><header class="board-copy"><span class="eyebrow">Technical verification</span><h3>Testing what the minimum prompt must preserve</h3><p>Approximately seventy controlled variants tested dependencies, omissions and correction cost. The result was a six-field minimum frame weighted by sketch fidelity, prompt execution and artist judgement.</p></header><button class="board-button" type="button" data-zoom="assets/promptkit/fal-verification.webp" aria-label="Enlarge verification process"><img src="assets/promptkit/fal-verification.webp" alt="Fal.ai verification workflow and minimum prompt criteria" loading="lazy"></button></article>
+
+        <article class="case-board glow-pink"><header class="board-copy"><span class="eyebrow">Prototype iteration</span><h3>Reducing complexity while making decisions visible</h3><p>User testing moved the prototype from one overloaded screen to a guided workflow. Each round clarified ownership, added source labels and introduced review states so teams could see what had been confirmed before handoff.</p></header><button class="board-button" type="button" data-zoom="assets/promptkit/prototype-iterations.webp" aria-label="Enlarge prototype iterations"><img src="assets/promptkit/prototype-iterations.webp" alt="PromptKit prototype iterations and design decisions" loading="lazy"></button></article>
+      </section>
+
+      <section class="chapter" id="deliver" aria-labelledby="deliver-title">
+        <header class="chapter-intro"><span class="chapter-number">04 · Deliver</span><h2 id="deliver-title">A shared workflow from sketch to production handoff</h2><p>The final system keeps the source image, artist decisions, AI observations, motion parameters and handoff state connected. Teams can move quickly without losing the rationale behind the work.</p></header>
+
+        <article class="case-board glow-purple"><header class="board-copy"><span class="eyebrow">Workflow architecture</span><h3>Analyse, direct, generate and hand off</h3><p>A sketch and task goal anchor the process. PromptKit builds a structured frame, adds motion and timing, then keeps preview, component review and delivery metadata together through handoff.</p></header><button class="board-button" type="button" data-zoom="assets/promptkit/workflow-architecture.webp" aria-label="Enlarge workflow architecture"><img src="assets/promptkit/workflow-architecture.webp" alt="PromptKit workflow from frame analysis to production handoff" loading="lazy"></button></article>
+
+        <article class="case-board"><header class="board-copy"><span class="eyebrow">Final web experience</span><h3>Creative space first, production context always close</h3><p>A collapsible workspace keeps navigation, project context and handoff status available without crowding the canvas. Starting from a sketch ensures every later choice can be traced back to the original visual intent.</p></header><button class="board-button" type="button" data-zoom="assets/promptkit/final-product-ui.webp" aria-label="Enlarge final product interface"><img src="assets/promptkit/final-product-ui.webp" alt="Final PromptKit web interface with production handoff and sketch analysis" loading="lazy"></button></article>
+
+        <article class="case-board final-board glow-cyan"><header class="board-copy"><span class="eyebrow">Design principle</span><h3>AI observes; the artist decides</h3><p>PromptKit separates editable AI observations from approved creative choices. Uncertainty stays visible, suggestions require confirmation and the artist remains the source of truth throughout the workflow.</p></header><button class="board-button" type="button" data-zoom="assets/promptkit/artist-led-direction.webp" aria-label="Enlarge artist-led direction"><img src="assets/promptkit/artist-led-direction.webp" alt="Artist-led direction and intent-versus-observation principles" loading="lazy"></button></article>
+      </section>
+    </section>
+
+    <footer class="project-footer"><a href="index.html#work">← Selected projects</a><a href="#project-flow">Back to top ↑</a></footer>
+  </main>
+
+  <dialog class="image-dialog" aria-label="Enlarged project board"><button class="dialog-close" type="button" aria-label="Close enlarged image">Close ×</button><img src="" alt=""></dialog>
+</body>
+</html>
