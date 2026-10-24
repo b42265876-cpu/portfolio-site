@@ -13,7 +13,7 @@
 .research-grid .eyebrow b{font-size:25px;line-height:1.1}
 .research-grid .eyebrow span{font-size:16px;color:var(--muted);font-weight:500}
 .source-board-section,.faithful-section{max-width:var(--max);padding-top:clamp(88px,9vw,140px);padding-bottom:clamp(88px,9vw,140px)}
-.source-board-section>:not(.source-board):not(.section-head),.faithful-section>:not(.source-board):not(.section-head){display:none}
+.source-board-section>:not(.source-board):not(.section-head):not(.board-zoom-hint),.faithful-section>:not(.source-board):not(.section-head):not(.board-zoom-hint){display:none}
 .source-board{display:block;width:100%;height:auto;object-fit:contain;border:0;border-radius:0;box-shadow:none}
 .atmosphere-section{position:relative;isolation:isolate}
 .atmosphere-section:before{content:"";position:absolute;z-index:-2;left:50%;top:0;width:100vw;height:clamp(390px,44vw,660px);transform:translateX(-50%);background-image:linear-gradient(180deg,rgba(2,13,25,.42) 0%,rgba(2,13,25,.66) 62%,var(--navy) 100%),url('assets/microplastics/p07-d9172.png');background-size:cover;background-repeat:no-repeat;opacity:.92;pointer-events:none}
@@ -30,4 +30,25 @@
   .source-board-section,.faithful-section{padding-left:0;padding-right:0}
   .source-board-section .section-head,.faithful-section .section-head{padding-left:22px;padding-right:22px}
   .screen-gallery img,.action-grid img{height:auto}
+}
+
+/* Mobile reading preview: preserve every source board and make dense details explorable. */
+.board-zoom-hint{display:none}
+.microplastics-image-dialog{width:100vw;max-width:none;height:100dvh;max-height:none;margin:0;padding:58px 0 28px;border:0;background:#020d19;color:#fff;overflow:auto;overscroll-behavior:contain}
+.microplastics-image-dialog::backdrop{background:rgba(0,7,14,.92)}
+.microplastics-image-dialog img{display:block;width:1500px;max-width:none;height:auto;margin:0 auto}
+.microplastics-dialog-close{position:fixed;z-index:3;top:14px;right:16px;width:42px;height:42px;border:1px solid rgba(255,255,255,.3);border-radius:50%;background:#fff;color:#071827;font:700 22px/1 Arial,sans-serif;cursor:pointer}
+
+@media(max-width:640px){
+  html,body{overflow-x:hidden}
+  .section-head h2{font-size:clamp(36px,11vw,46px);line-height:1}
+  .section-head>p{font-size:16px;line-height:1.6}
+  .source-board,.flow-image{cursor:zoom-in}
+  .source-board:focus-visible,.flow-image:focus-visible{outline:3px solid var(--cyan);outline-offset:5px}
+  .flow-image{padding:0;border-radius:12px}
+  .board-zoom-hint{display:flex;align-items:center;justify-content:center;gap:8px;margin:14px 22px 0;color:#bdd0df;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+  .board-zoom-hint:before{content:'+';display:grid;place-items:center;width:21px;height:21px;border:1px solid #74d8ee;border-radius:50%;color:#74d8ee;font-size:14px}
+  .scenario{grid-template-columns:1fr}
+  .prototype-grid .model img{height:auto}
+  .microplastics-image-dialog img{width:1400px}
 }
