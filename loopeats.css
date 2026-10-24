@@ -319,3 +319,29 @@
 .direct-system-map{background:#143d2b}
 .final-design-board-section{padding:clamp(44px,5vw,76px) 0 0;background:#fff}
 @media(max-width:700px){.figma-frame-section .direct-board-heading{width:calc(100% - 48px);margin-bottom:28px}.direct-design-board{min-width:920px}.figma-frame-section:has(.direct-design-board){overflow-x:auto}}
+
+/* Mobile reading preview: keep the page linear and offer full-resolution zoom for dense boards. */
+.mobile-board-intro,.mobile-zoom-hint{display:none}
+.loopeats-image-dialog{width:100vw;max-width:none;height:100dvh;max-height:none;margin:0;padding:58px 0 28px;border:0;background:#0b120d;color:#fff;overflow:auto}
+.loopeats-image-dialog::backdrop{background:rgba(5,10,7,.88)}
+.loopeats-image-dialog img{display:block;width:auto;max-width:none;height:auto;margin:0 auto}
+.loopeats-dialog-close{position:fixed;z-index:3;top:14px;right:16px;width:42px;height:42px;border:1px solid rgba(255,255,255,.32);border-radius:50%;background:#fff;color:#173322;font:700 22px/1 Arial,sans-serif;cursor:pointer}
+
+@media(max-width:700px){
+  .loopeats-page{overflow-x:hidden}
+  .loop-hero-phones{overflow:hidden}
+  .screen-strip{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 10px;overflow:visible;padding:6px 0 10px;scroll-snap-type:none}
+  .screen-strip figure{min-width:0}
+  .screen-strip img{border-radius:14px;box-shadow:0 10px 24px rgba(23,51,34,.08)}
+  .screen-strip figcaption{font-size:11px;line-height:1.35;letter-spacing:.04em}
+  .figma-frame-section:has(.direct-design-board){overflow:hidden}
+  .direct-design-board{position:relative;width:100%;min-width:0;max-width:100%!important;overflow:hidden;cursor:zoom-in}
+  .direct-design-board img{width:100%;max-width:100%;height:auto}
+  .mobile-board-intro{display:block;width:calc(100% - 44px);margin:0 auto 24px}
+  .mobile-board-intro span{display:block;margin-bottom:9px;color:#66806f;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+  .mobile-board-intro h2{margin:0 0 10px;color:#173322;font-size:30px;line-height:1.08;letter-spacing:-.035em}
+  .mobile-board-intro p{margin:0;color:#627067;font-size:15px;line-height:1.55}
+  .mobile-zoom-hint{display:flex;align-items:center;justify-content:center;gap:7px;margin:12px auto 0;color:#627067;font-size:12px;font-weight:700;letter-spacing:.04em}
+  .mobile-zoom-hint:before{content:'+';display:grid;place-items:center;width:20px;height:20px;border:1px solid #9aa9a0;border-radius:50%;font-size:14px}
+  .loopeats-image-dialog img{width:1100px;max-width:none}
+}
