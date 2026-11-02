@@ -21,6 +21,8 @@ a{color:inherit;text-decoration:none}button{font:inherit}img{max-width:100%}
 .board-text-segment{font-family:var(--segment-font,inherit);font-weight:var(--segment-weight,inherit);font-style:var(--segment-style,inherit);color:var(--segment-color,inherit)}
 .board-text-node.is-translated{overflow:visible;font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",Inter,sans-serif!important;letter-spacing:0!important;overflow-wrap:anywhere;word-break:normal;line-break:auto;text-rendering:optimizeLegibility}
 .board-text-node.is-compact-label{width:max-content!important;max-width:none!important;height:auto!important;overflow:visible!important;white-space:nowrap!important}
+.board-text-node.is-emoji{width:max-content!important;max-width:none!important;height:auto!important;overflow:visible!important;white-space:nowrap!important;font-family:"Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif!important;line-height:1.15!important;padding:.06em .22em .12em .04em}
+.board-text-node.is-emoji .board-text-content{display:inline-block;overflow:visible}
 .board-text-node.is-translated .board-text-content,.board-text-node.is-translated .board-text-segment,.board-text-node.is-translated font{font-family:inherit!important;-webkit-font-smoothing:antialiased}
 .case-hero h1{white-space:nowrap}
 .case-hero h1.is-translated-title,html[lang^="zh"] .case-hero h1{width:max-content;max-width:none;font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",Inter,sans-serif;font-size:clamp(72px,7vw,120px);letter-spacing:-.04em}

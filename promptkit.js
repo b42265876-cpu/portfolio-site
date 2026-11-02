@@ -128,6 +128,8 @@ const createBoardTextLayer=(button,boardNumber,board)=>{
     const node=document.createElement('div');
     const content=document.createElement('span');
     node.className='board-text-node';
+    const emojiOnly=/^[\p{Extended_Pictographic}\uFE0F\u200D]+$/u.test(textNode.c.trim());
+    if(emojiOnly)node.classList.add('is-emoji');
     const compactLabels=new Set(['HMW','Issue:','Decision:','Before:','After:','Design Response:']);
     const compactLabel=compactLabels.has(textNode.c.trim());
     if(compactLabel)node.classList.add('is-compact-label');
