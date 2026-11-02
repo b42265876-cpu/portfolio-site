@@ -152,7 +152,8 @@ const createBoardTextLayer=(button,boardNumber,board)=>{
     }
     node.append(content);
     node.style.left=`${textNode.x/board.w*100}%`;
-    node.style.top=`${textNode.y/board.h*100}%`;
+    const sourceY=boardNumber==='10'&&textNode.c.trim()==='Assemble | Export'?1025.037109375:textNode.y;
+    node.style.top=`${sourceY/board.h*100}%`;
     node.style.width=`${textNode.w/board.w*100}%`;
     node.style.height=`${textNode.h/board.h*100}%`;
     node.style.setProperty('--text-color',cssColor(textNode.fill));
@@ -200,11 +201,21 @@ const createBoardTextLayer=(button,boardNumber,board)=>{
       content.style.transform='none';
       const source=node._sourceText;
       const boardScale=node._boardScale||1;
+      const largestSourceFont=Math.max(source.fs||0,...(source.segs||[]).map((segment)=>segment.fs||0),16);
+      const cleanSourceText=String(source.c||'').trim();
+      const sourceSingleLine=!/[\r\n]/.test(cleanSourceText)&&source.h<=largestSourceFont*1.6;
+      node.classList.toggle('is-source-single-line',sourceSingleLine&&!translated);
       node.style.fontSize=`${(source.fs||16)*boardScale}px`;
-      node.style.height=translated?'auto':`${source.h/board.h*100}%`;
+      node.style.height='auto';
+      node.style.minHeight=`${source.h/board.h*100}%`;
       node.querySelectorAll('.board-text-segment').forEach((segment)=>{
         if(segment._sourceSegment?.fs)segment.style.fontSize=`${segment._sourceSegment.fs*boardScale}px`;
       });
+      if(sourceSingleLine&&!translated){
+        const naturalWidth=content.scrollWidth;
+        const availableWidth=source.w*boardScale;
+        if(naturalWidth>availableWidth+.5)content.style.transform=`scale(${availableWidth/naturalWidth})`;
+      }
     });
   };
   const scheduleTranslationFit=()=>{
@@ -307,4 +318,5 @@ prototypeLinks.forEach((link)=>{
   link.addEventListener('focus',warmPrototype,{once:true,passive:true});
   link.addEventListener('touchstart',warmPrototype,{once:true,passive:true});
 });
+
 
